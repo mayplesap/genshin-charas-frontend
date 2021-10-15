@@ -1,5 +1,5 @@
 import { Route, Switch, Redirect } from "react-router-dom";
-import Homepage from "./Homepage";
+import Home from "../src/pages/Home";
 
 /** Routes
  * props:
@@ -7,13 +7,13 @@ import Homepage from "./Homepage";
  * App -> Routes
  */
 
-function Routes() {
+function Routes({charas}) {
   return (
     <Switch className="Routes">
       <Route exact path="/character/:id">
       </Route>
       <Route exact path="/">
-        <Homepage />
+        <Home charas={charas} />
       </Route>
       <Redirect to="/" />
     </Switch>
